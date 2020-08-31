@@ -5,4 +5,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `production pm2 start npm -- start`
 ### `dev npm start`
 
+### `production url : http://dvisign-react.com/invitation`
+
 
