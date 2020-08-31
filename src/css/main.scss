@@ -1,0 +1,88 @@
+.routeWrapper {
+  .mainSection {
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  .pinContainer {
+    position: relative;
+    height:100vh;
+  }
+  #main-conts {
+    overflow: hidden;
+    #index-main {
+      background-image:url('http://dvisign.com/main_portfolio/img/background/main_bg2.jpg');
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .row {
+        #main_visual_logos {
+          margin-top: 1rem;
+          animation: App-logo-spin infinite 20s linear;
+        }
+        .hr-light {
+          width: 30%;
+          display: block;
+        }
+        .cate_tit {
+          font-size:3.8rem;
+        }
+        p {
+          font-size:0.8rem;
+        }
+        #scrolls {
+          position:absolute;
+          left: 0;
+          right: 0;
+          bottom:5rem;
+          #main_scroll_btn {
+            button {
+              border:1px solid #fff !important;
+              color:#fff !important;
+              font-weight: 100;
+            }
+          }
+          #main_scorlls_arrow {
+            animation:scrollFadeInOuts;
+            animation-duration: 1.5s;
+            animation-iteration-count:infinite;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    #profiles {
+      min-height: 100vh;
+      background:#fff;
+      #profile_header {
+        position: relative;
+  
+      }
+    }
+  }
+}
+@keyframes scrollFadeInOuts { 
+  0% {
+    opacity:0;
+    transform: translateY(-2rem);
+  }
+  40% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,584 @@
+// wrapper
+#main-conts {
+  font-family: 'Jeju Myeongjo';
+  font-weight:600;
+  margin-bottom:60px;
+  // classes
+  .sectionTitles {
+    font-size:2.4rem; 
+    font-weight:bold;
+    font-family: 'Jeju Myeongjo';
+  }
+  .phoneIcons {
+    display:flex;
+    border-radius:50%;
+    overflow:hidden;
+    font-size:1.7rem;
+    width:3.5rem;
+    height:3.5rem;
+    justify-content:center;
+    align-items:center;
+    &.greenColor {
+      color:#68ad42;
+      background:#fff;
+    }
+    &.greenBg {
+      color:#fff;
+      background:#68ad42;
+    }
+    &.pinkColor {
+      color:#fde6dc;
+      background:#fff;
+    }
+    &.pinkBg {
+      color:#fff;
+      background:#fac3ae;
+    }
+  }
+  .phoneNames {
+    margin:0;
+    .weddingPos {
+      font-size:0.9rem;
+      font-family: "noto sans kr";
+      &.greenColor {
+        color:#69ad40;
+      }
+      &.pinkColor {
+        color:#fac3ae;
+      }
+    }
+    .weddingName {
+      font-size:1.2rem;
+    }
+  }
+  .loadLayer {
+    min-height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    .loader_img {
+      font-size:2rem;
+      animation: loader 3s linear infinite;
+    }
+  }
+  @keyframes loader {
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+  }
+  // top nav styles
+  #invitation_nav {
+    position:fixed;
+    width:100%;
+    left:0;
+    top:-100%;
+    z-index:1000;
+    transition:all 0.3s ease-in-out 0s;
+    .row {
+      margin:0;
+      padding:0.5rem 0;
+      background-color:#333;
+      .navListItems {
+        text-align:center; 
+        .navItems {
+          display:block;
+          background:transparent;
+          width:100%;
+          color:#fff;
+          padding:0.4rem 0;
+          font-weight: 100;
+          font-size:0.9rem;
+          font-family:"Noto Sans KR";
+        }
+      }
+    }
+  }
+  // main section
+  #main_sections {
+    img {
+      width:100%;
+      max-width:480px;
+    }
+  }
+  // invitation text section
+  #invitation_txt {
+    background-color:#fee6dc;
+    img {
+      width:100%;
+      max-width:403px;
+    }
+  }
+  // phone number section
+  #phoneNum {
+    background-color:#fee6dc;
+    #phoneNumConts {
+      display:flex;
+      .caricatures {
+        overflow:hidden;
+        width:107px;
+        height:107px;
+        background-color:#fff;
+        border-radius : 50%;
+        margin:0 auto;
+      }
+      .weddingName {
+        span {
+          display:inline-block;
+        }
+      }
+      .weddingPhone {
+        display:flex;
+        justify-content:center;
+        .pr-3 {
+          position: relative;
+          &::after {
+            content:"";
+            background:#fff;
+            width:2px;
+            height:75%;
+            display:block;
+            position:absolute;
+            left: 100%;
+            top:50%;
+            transform:translateY(-50%);
+          }
+        }
+        a {
+          font-size: 1.7rem;
+          color:#fff;
+        }
+      }
+    }
+  }
+  // family phone number section
+  #familyNum {
+    background-color:#fee6dc;
+    #familyNumConts {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      .familyNumItems {
+        width:50%;
+      }
+      .familyPhoneIconWrapper {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+    }
+  }
+  // album section
+  #albums {
+    h2 {
+      img {
+        width:100%;
+      }
+    }
+    .albumItems {
+      position : relative;
+      overflow : hidden;
+      padding:0;
+      img {
+        width:100%;
+      }
+    }
+    #albumAdd {
+      font-size:2rem;
+      display:block;
+      width:100%;
+      background:transparent;
+      padding-top:0.5rem;
+      border-top:3px solid #fee6dc;
+      color:#fee6dc;
+    }
+  }
+  // navigator section
+  #weddingMaps {
+    background-color:#fee6dc;
+    h2.mb-5 {
+      img {
+        width:100%;
+      }
+    }
+    .container {
+      #mapsConts {
+        background:#fff;
+        .mapBtns {
+          div {
+            width:3rem;
+            height:3rem;
+            font-size:1.4rem;
+            border-radius:50%;
+            border:1px solid #ccc;
+            position:relative;
+            .markerIcons {
+              position:absolute;
+              top:50%;
+              left:calc(50% + 1px);
+              transform:translate(-50%, -50%);
+            }
+          }
+          p {
+            margin-bottom:0;
+            margin-left:2px;
+            font-size:0.7rem;
+            font-family:"noto sans kr";
+          }
+          &#naverMapsBtn {
+            color:#72ea52; 
+            display:block; 
+            background-color:transparent
+          }
+          &#kakaoMapsBtn {
+            color:#017cff;
+            display:block;
+            background-color:transparent
+          }
+        }
+        #mapInit {
+          position:relative;
+          padding-bottom:100%;
+          overflow:hidden;
+          #mapWrapper {
+            width:100%;
+            height:100%;
+            position:absolute;
+            padding:1rem;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            #maps {
+              width:100%;
+              height:100%;
+            }
+            #mapControls {
+              position:absolute;
+              z-index:2;
+              top:50%;
+              left:50%;
+              transform:translate(-50%, -50%);
+              width:calc(100% - 2rem);
+              height:calc(100% - 2rem);
+              display:block;
+              background:rgba(0,0,0,0.3);
+              transition:all 0.3s ease-in-out;
+              &.on {
+                display:none;
+              }
+              #mapFadeOutBtn {
+                position: absolute;
+                bottom:2rem;
+                width:100%;
+                font-family: 'noto sans kr';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // massage section
+  #msgArea {
+    background-color: #fee6dc;
+    h2.mb-5 {
+      img {
+        width: 100%;
+      }
+    }
+    #msgListContainer {
+      #msgListConts {
+        background-color:#fff;
+        padding:1rem;
+        #msgLists {
+          font-family: "noto sans kr";
+          .msgListItems {
+            background:#f4f3f1;
+            margin-bottom:5px;
+            padding:1rem 0.8rem;
+            text-align:left;
+            color:#b1aea5;
+            &:last-child {
+              margin-bottom: 0;
+            }
+            .msgListWriter {
+              display:flex;
+              align-items:center;
+              justify-content:space-between;
+              margin-bottom:7px;
+              .msgListThumbs {
+                position:relative;
+                width:30px;
+                height:30px;
+                border-radius:50%;
+                overflow : hidden;
+                display: block;
+                .msgListThumbImgs {
+                  position:absolute;
+                  top:50%;
+                  left:50%;
+                  transform:translate(-50%, -50%);
+                  width:100%;
+                }
+              }
+              .msgListWriterName {
+                font-size:0.9rem;
+                font-weight:600;
+                display: block;
+                margin-left:5px;
+              }
+              .msgListNewIcons {
+                color:#ec407a;
+                margin-left:5px;
+                position: relative;
+                bottom: 5px;
+              }
+              .msgMdBtns {
+                font-size:0.8rem;
+                margin:0 3px;
+                color:#b1aea5;
+                opacity:0.8;
+              }
+              .msgListWrDatetime {
+                font-size:0.8rem;
+                font-weight:400;
+                margin-bottom:7px;
+              }
+            }
+            .msgListComments {
+              font-size:0.8rem;
+              font-weight:400;
+              margin-bottom:0;
+            }
+          }
+          #emptyMsg {
+            height:300px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+          }
+        }
+        #addMsgBtn {
+          font-size:2rem;
+          display:block;
+          width:100%;
+          background:transparent;
+          padding-top:0.5rem;
+          border-top:3px solid #fee6dc;
+          color:#fee6dc;
+        }
+      }
+    }
+    #writeWiget {
+      position : fixed;
+      width:100%;
+      bottom:0;
+      left:0;
+      z-index:100;
+      transition:all, 0.3s, ease-in-out;
+      background-color:#ccc;
+      padding:0.5rem;
+      font-family:"noto sans kr";
+      #msgBox {
+        display:flex;
+        justify-content:center;
+        #writerBox {
+          width:20%;
+          #thumbnail_wrapper {
+            position:relative;
+            width:30px;
+            height:30px;
+            overflow:hidden;
+            border-radius:50%;
+            margin:0 auto;
+            #wr_thumbnail {
+              position:absolute;
+              top:50%; 
+              left:50%;
+              transform:translate(-50%, -50%);
+              width:100%;
+            }
+          }
+          #wr_nick {
+            font-size:0.7rem;
+          }
+        }
+        #msgMemoBox {
+          width:60%;
+          #msgText {
+            display:block;
+            width:100%;
+            resize:none;
+            color:#222;
+            font-family:"noto sans kr";
+            font-size:0.8rem;
+            height:100%;
+          }
+          #loginmsgText {
+            display:block;
+            width:100%;
+            resize:none;
+            color:#222;
+            font-family:"noto sans kr";
+            font-size:0.8rem;
+            height:100%;
+            padding:5px;
+          }
+        }
+        #msgSubmit {
+          width:20%;
+          button {
+            font-family:"noto sans kr";
+            margin:0;
+            height:100%;
+            padding:.84rem 0;
+            display:block;
+            width:100%;
+          }
+        }
+      }
+      #kakaoLoginsBtn {
+        display:block;
+        width:100%;
+        background:transparent;
+        #kakaoLoginSubmit {
+          width: 20%;
+          img {
+            width:100%;
+            max-width:50px;
+          }
+        }
+      }
+    }
+    #msgModifys {
+      position: fixed;
+      width:100%;
+      height:100vh;
+      left: 0;
+      top: 0;
+      z-index: 1001;
+      .container {
+        position: relative;
+        height: 100%;
+        #msgMdWrapper {
+          display: flex;
+          justify-content:center;
+          align-items:center;
+          height: 100%;
+          #msgMdConts {
+            position: relative;
+            z-index: 1;
+            background:#ccc;
+            padding: 1rem;
+            width: 100%;
+            #md_writer_wrapper {
+              #md_wr_thumbs {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                border-radius: 50%;
+                margin: 0 auto;
+                #md_wr_imgs {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 100%;
+                }
+              }
+              #md_wr_names {
+                font-size: 0.7rem;
+              }
+            }
+            #md_comment_wrapper {
+              #md_comment {
+                resize:none;
+                width: 100%;
+                padding: 5px;
+              }
+            }
+          }
+        }
+      }
+      #msgMdBg {
+        position:absolute;
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+        background-color:rgba(0,0,0,0.5);
+      }
+    }
+  }
+  // shares section
+  #share_section {
+    background-color:#fee6dc;
+    #kakaoShereBtn {
+      display:block;
+      font-weight: 600;
+      background-color:#fae100;
+      color:#3c1e1e;
+      width: 100%;
+      font-family:"noto sans kr";
+      padding:1rem;
+    }
+  }
+}
+// album modal
+.ReactModal__Overlay {
+  z-index:1001 !important;
+}
+#album_modals {
+  #albumConts {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 0;
+    #albumViewHeader {
+      background-color:#333;
+      padding: 0.5rem 0;
+      #albumViewNav {
+        color:#fff;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        h3 {
+          padding: 0.4rem 15px;
+          font-weight: 100;
+          font-size: 0.9rem;
+          font-family: "Noto Sans KR";
+          margin:0;
+        }
+        button {
+          display:block;
+          background: transparent;
+          color:#fff;
+          padding: 0.4rem 15px;
+        }
+      }
+    }
+    #albumViewLists {
+      .slick-track {
+        display: flex;
+      }
+      .slick-track .slick-slide {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        .albumViewItems {
+          padding:2rem;
+          img {
+            width:100% !important;
+          }
+        }
+      }
+    }
+  }
+  #modalBg {
+    width:100%;
+    height:100%;
+  }
+}
